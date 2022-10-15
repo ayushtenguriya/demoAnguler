@@ -1,0 +1,16 @@
+/* .card {
+    margin-top:10%;
+    color: blue;
+    border: 1px solid;
+    text-align: justify;
+    padding: 15px;
+} */
+.container{
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.container button{
+    margin: 10px;
+}

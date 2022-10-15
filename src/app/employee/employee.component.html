@@ -1,0 +1,53 @@
+<div class="container">
+<h2>User Detail</h2>
+<form #userForm="ngForm" (ngSubmit)="saveEmp(userForm.value)">
+    <span>EmpId: </span><input type="text" ngModel name="empId" placeholder="Enter empId">
+    <br><br>
+    <span>Email: </span><input type="text" ngModel name="email" placeholder="Enter email">
+    <br><br>
+    <span>Mobile: </span><input type="text" ngModel name="mobile" placeholder="Enter mobile">
+    <br><br>
+    <span>Name: </span><input type="text" ngModel name="name" placeholder="Enter name">
+    <br><br>
+    <!-- <button mat-button color="accent">Add New</button>
+    <button mat-raised-button color="primary">send email</button> -->
+    <button type="submit"mat-raised-button color="primary">Send</button>
+     <button type="reset"mat-raised-button color="accent">Reset</button>
+</form>
+</div>
+<br><br><br>
+<table class="mat-elevation-z8">
+    <thead>
+            <tr>
+                <th>Emp Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>            
+            </tr>
+            <tr *ngFor="let e of emp">
+                <td>{{e.email}}</td>
+                <td>{{e.name}}</td>
+                <td>{{e.email}}</td>
+                <td>{{e.mobile}}</td> 
+            </tr>
+        </thead>
+    </table>
+    <br><br><br>
+<table class="mat-elevation-z8">
+    <thead>
+            <tr>
+                <th>PageNo</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Id</th>
+                <th>Body</th>
+            </tr>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.postId}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.id}}</td>       
+                <td>{{emp.body}}</td>
+            </tr>
+        </thead>
+    </table>
