@@ -22,4 +22,11 @@ export class TestserviceService {
   return this.httpClient.post("http://localhost:8081/save",data,{responseType: 'text'});
 }
 
+ getAllUsers(): Observable<any>{  
+  return this.httpClient.get("https://gorest.co.in/public/v2/users"); 
+}
+
+
+
+
 }

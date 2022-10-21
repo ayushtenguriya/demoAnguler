@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,21 +9,25 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,    
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

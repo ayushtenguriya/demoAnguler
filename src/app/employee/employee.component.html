@@ -1,5 +1,7 @@
 <div class="container">
 <h2>User Detail</h2>
+
+
 <form #userForm="ngForm" (ngSubmit)="saveEmp(userForm.value)">
     <span>EmpId: </span><input type="text" ngModel name="empId" placeholder="Enter empId">
     <br><br>
@@ -16,7 +18,7 @@
 </form>
 </div>
 <br><br><br>
-<table class="mat-elevation-z8">
+<table class="table">
     <thead>
             <tr>
                 <th>Emp Id</th>
@@ -33,21 +35,31 @@
         </thead>
     </table>
     <br><br><br>
-<table class="mat-elevation-z8">
-    <thead>
-            <tr>
-                <th>PageNo</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Id</th>
-                <th>Body</th>
-            </tr>
-            <tr *ngFor="let emp of employee">
-                <td>{{emp.postId}}</td>
-                <td>{{emp.name}}</td>
-                <td>{{emp.email}}</td>
-                <td>{{emp.id}}</td>       
-                <td>{{emp.body}}</td>
-            </tr>
-        </thead>
-    </table>
+
+    
+	
+	<table class="table table-success table-striped">
+        <thead>
+                <tr>
+                    <th scope="col">PageNo</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Gender</th>
+                </tr>
+                <tr *ngFor="let usr of user; index as i">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{usr.id}}</td>
+                    <td>{{usr.name}}</td>
+                    <td>{{usr.email}}</td>
+                    <td>{{usr.status}}</td>       
+                    <td>{{usr.gender}}</td>
+                </tr>
+            </thead>
+        </table>
+
+
+        <div class="alert alert-danger" role="alert">
+<b>This page created by Ayush Sharma!</b>
+</div>
